@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- Selections in Horizontal Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Difficulty Selection -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tv_difficulty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select difficulty:"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_difficulty"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb_easy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Easy" />
+
+                <RadioButton
+                    android:id="@+id/rb_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medium" />
+
+                <RadioButton
+                    android:id="@+id/rb_hard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hard" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <!-- Operation Selection -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tv_operation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select operation:"
+                android:textSize="18sp"
+                android:layout_alignTop="@+id/tv_difficulty"
+                android:layout_centerHorizontal="true" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_operation"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb_addition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Addition" />
+
+                <RadioButton
+                    android:id="@+id/rb_subtraction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subtraction" />
+
+                <RadioButton
+                    android:id="@+id/rb_multiplication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Multiplication" />
+
+                <RadioButton
+                    android:id="@+id/rb_division"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Division" />
+            </RadioGroup>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- Number of Questions Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number of questions:"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_decrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginStart="16dp" />
+
+        <TextView
+            android:id="@+id/tv_question_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textSize="18sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btn_increase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_marginEnd="16dp" />
+    </LinearLayout>
+
+    <!-- START Button -->
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="START"
+        android:textSize="18sp"
+
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp" />
+</LinearLayout>
